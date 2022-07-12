@@ -142,7 +142,7 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
         let gclink = (`https://chat.whatsapp.com/`+await hisoka.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return m.reply(`Ehh maaf gak jadi, karena kamu ngirim link group ini`)
+        if (isgclink) return m.reply(`Ehh sorry I didn't, because you sent the link to this group`)
         if (isAdmins) return m.reply(`Ehh maaf kamu admin`)
         if (isCreator) return m.reply(`Ehh maaf kamu owner bot ku`)
         hisoka.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
